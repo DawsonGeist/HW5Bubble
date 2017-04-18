@@ -7,7 +7,7 @@ public class main
 		ArrayList<Integer> list = new ArrayList<Integer>();
 		for(int i = 0; i < n; i++)//iterates through list
 		{
-			list.add((int)(10*Math.random()));//generates 0-9
+			list.add((int)(100*Math.random()));//generates 0-9
 		}
 		return list;
 	}
@@ -37,10 +37,11 @@ public class main
 				 * "Switch"
 				 * returner: b,a,c...
 				 */
-				//if()
+				if(returner.get(i)<returner.get(i-1))
 				{
-					//implement truth statement
-					//sort
+					largerNum = returner.get(i-1);
+					returner.set(i-1,returner.get(i));
+					returner.set(i, largerNum);
 				}
 			}
 			
@@ -55,58 +56,34 @@ public class main
 	public static void main(String[] args)
 	{
 	
-//		System.out.println("Welcome to Bubble Sort 1.0\n");
-//		int[] list = new int[10];
-//		list = generateList(10);
-//		
-//		for(int i = 0; i < 10; i++)
-//		{
-//			if(i==9)
-//			{
-//				System.out.print(list[i]+"\n");
-//			}
-//			else
-//			System.out.print(list[i] + ", ");
-//		}
-//		
-//		System.out.println("\n\tSorted list:\n");
-//		
-//		sort(list);
-//		
-//		for(int i = 0; i < 10; i++)
-//		{
-//			if(i==9)
-//			{
-//				System.out.print(list[i]+"\n");
-//			}
-//			else
-//			System.out.print(list[i] + ", ");
-//		}
-		
-		System.out.println("Testing the switch algorithym");
-		ArrayList<Integer> test = new ArrayList<Integer>();
+		System.out.println("Welcome to Bubble Sort 1.0\n");
+		//create list
+		ArrayList<Integer> list = generateList(10);
 		//print out list
-		test.add(5);
-		test.add(3);
-		for(int i = 0; i<test.size();i++)
+		for(int i = 0; i < 10; i++)
 		{
-			System.out.print(test.get(i) + " ");
+			if(i==9)
+			{
+				System.out.print(list.get(i)+"\n");
+			}
+			else
+			System.out.print(list.get(i) + ", ");
 		}
-		//switch the first two
-		int largerNum;
-		if(test.get(1)<test.get(0))
+		
+		System.out.println("\n\tSorted list:\n");
+		//sort
+		sort(list);
+		//rePrint the list
+		for(int i = 0; i < 10; i++)
 		{
-			System.out.print("True");
-			largerNum = test.get(0);
-			test.set(0,test.get(1));
-			test.set(1, largerNum);
+			if(i==9)
+			{
+				System.out.print(list.get(i)+"\n");
+			}
+			else
+			System.out.print(list.get(i) + ", ");
 		}
-		//print out updated list
-		System.out.println("Updated:");
-		for(int i = 0; i<test.size();i++)
-		{
-			System.out.print(test.get(i) + " ");
-		}
+		
 		
 	}
 }
