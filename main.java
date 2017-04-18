@@ -24,8 +24,9 @@ public class main
 		{
 			
 			/*
-			 * Pulls the "Switching" logic down the list until it 
-			 * reaches the end of the "Sort Bubble" (k)
+			 * Pulls the "Switching" logic (if statement) 
+			 * down the list until it reaches the end of 
+			 * the Sorting "Bubble" (k)
 			 */
 			
 			for(int i = 1; i < k; i++)//Bounded by Sorting Bubble
