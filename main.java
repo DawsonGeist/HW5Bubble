@@ -14,14 +14,21 @@ public class main
 	
 	public static void main(String[] args)
 	{
-		System.out.println("Welcome to Bubble Sort 1.0");
+		System.out.println("Welcome to Bubble Sort 1.0\n");
 		int[] list = new int[10];
 		list = generateList(10);
 		
 		for(int i = 0; i < 10; i++)
 		{
+			if(i==9)
+			{
+				System.out.print(list[i]+"\n");
+			}
+			else
 			System.out.print(list[i] + ", ");
 		}
+		
+		System.out.println("\n\tSorted list: ");
 		
 	}
 }
